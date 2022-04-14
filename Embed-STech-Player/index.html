@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Coding By S-Tech04 - youtube.com/STech04 -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Embed Code Generator | S-Tech04</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header>
+      <h1>Embed Code Generator</h1>
+      <p>Paste a url to create Embed Code</p>
+    </header>
+    <form class="form">
+      <input type="text" class="src" spellcheck="false" placeholder="Enter Video Url" required/>
+      <input type="text" class="thumbnail" spellcheck="false" placeholder="Paste Thumbnail Url" />
+      <label>Control Button Color</label>
+      <input type="color" id="controlsColor" value="#ffffff">
+      <label>Progress Bar Color</label>
+      <input type="color" id="progressColor" value="#ffae00">
+      <a class="trBtn btn">Add Caption</a>
+      <a class="preBtn btn">Preview Video</a>
+      <button class="subBtn" type="submit">Generate Embed Code</button>
+    </form>
+  </div>
+  <div class="video_preview">
+    <h2>Video Preview</h2>
+    <iframe src=""frameborder="0"></iframe>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
