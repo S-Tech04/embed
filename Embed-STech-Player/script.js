@@ -77,7 +77,7 @@ form.addEventListener("submit", function (e) {
 </div>`;
   video_preview.insertAdjacentHTML("afterend", iframe_p_html);
   const getCode = document.querySelector(".iframe_code pre");
-  let html = `<iframe src="http://127.0.0.1:5500/index.html?v=${code}"frameborder="0" width="720" height="400"></iframe>`;
+  let html = `<iframe src="https://s-tech04.github.io/embed/index.html?v=${code}"frameborder="0" width="720" height="400"></iframe>`;
   getCode.innerHTML = html.toHtmlEntities();
   getCode.parentNode.style.display = "flex";
   close();
@@ -85,7 +85,7 @@ form.addEventListener("submit", function (e) {
 
 function preview() {
   let embeded = fun();
-  iframe.src = `http://127.0.0.1:5500/index.html?v=${embeded}`;
+  iframe.src = `https://s-tech04.github.io/embed/index.html?v=${embeded}`;
   iframe.parentNode.style.display = "flex";
 }
 
