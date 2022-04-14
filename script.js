@@ -11,7 +11,7 @@ const video_player_html = `
 <section>
 <div class="container"  translate="no">
   <div id="stech_video_player" class="stech_video_player" style="--pColor: ${embed.controls[0].progressColor};--cColor:${embed.controls[0].color}">
-<video preload="metadata" id="main-video" crossorigin="true"></video>
+<video preload="metadata" id="main-video" crossorigin="anonymous></video>
 <p class="caption_text" ></p> 
 <div class="progressAreaTime">0:00</div>
 
