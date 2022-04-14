@@ -1,39 +1,9 @@
-let j = {
-  sources : [
-    "https://samplelib.com/lib/preview/mp4/sample-5s.mp4","https://samplelib.com/lib/preview/mp4/sample-5s.mp4"
-  ],
-  subtitles:[
-    {
-      src: "http://127.0.0.1:5500/How%20To%20Get%20Started%20With%20VSCode.vtt",
-      kind: "subtitles",
-      label: "English",
-      srclang: "en"
-    },
-    {
-      src: "http://127.0.0.1:5500/test.vtt",
-      kind: "subtitles",
-      label: "Urdu",
-      srclang: "ur"
-    }
-  ],
-  controls:[
-    {
-      poster: "http://127.0.0.1:5500/logo.png",
-      color:"#fff",
-      progressColor:"#ffae00"
-    }
-  ]
-}
-// console.log(window.btoa(c));
-//  var d = console.log(window.btoa(JSON.stringify(j)));
 
 var url_string = window.location.href;
 var url = new URL(url_string);
 
-// const n = window.btoa(url.searchParams.get("v"));
 var embed = JSON.parse(window.atob(url.searchParams.get("v")));
 
-// console.log(embed)
 
 // let's select all required tags or elements
 
@@ -177,7 +147,7 @@ if (typeof tracks == 'undefined') {
 
 if (tracks != false) {
   for (let i = 0; i < tracks.length; i++) {
-    let trackData = ` <track id="${tracks[i].label}${i}" label="${tracks[i].label}" kind="${tracks[i].kind}" src="${tracks[i].src}" srclang="${tracks[i].srclang}"> `;
+    let trackData = ` <track id="${tracks[i].label}${i}" label="${tracks[i].label}" kind="${tracks[i].kind}" src="//${tracks[i].src}" srclang="${tracks[i].srclang}"> `;
     mainVideo.insertAdjacentHTML("beforeend", trackData);
   }
 }
